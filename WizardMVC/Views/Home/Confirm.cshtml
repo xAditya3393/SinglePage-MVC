@@ -1,0 +1,80 @@
+﻿@model WizardMVC.Models.CustomerInfo
+@{
+    ViewBag.Title = "Confirm";
+}
+<h2>Please Confirm the foloowing Data</h2>
+<fieldset>
+    <legend>CustomerInfo</legend>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.FirstName):
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.LastName):
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Email):
+        @Html.DisplayFor(model => model.Email)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.StreetAddress):
+        @Html.DisplayFor(model => model.StreetAddress)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.City):
+        @Html.DisplayFor(model => model.City)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.State):
+        @Html.DisplayFor(model => model.State)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.Telephone):
+        @Html.DisplayFor(model => model.Telephone)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CellPhone):
+        @Html.DisplayFor(model => model.CellPhone)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CustomerPin):
+        @Html.DisplayFor(model => model.CustomerPin)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.CardNum):
+        @Html.DisplayFor(model => model.CardNum)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.ExpDate):
+        @Html.DisplayFor(model => model.ExpDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.SoccerBall):
+        @Html.DisplayFor(model => model.SoccerBall)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.SoccerShoes):
+        @Html.DisplayFor(model => model.SoccerShoes)
+    </div>
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.SoccerJersy):
+        @Html.DisplayFor(model => model.SoccerJersy)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.EnergyDrinks):
+        @Html.DisplayFor(model => model.EnergyDrinks)
+    </div>
+
+
+    @using (Html.BeginForm())
+    {
+        <input type="submit" name="btnPrev" value="Prev" />
+        @:&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="btnFinish" value="Finish" />
+        @ViewBag.Msg;
+    }
+</fieldset>
